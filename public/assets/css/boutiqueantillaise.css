@@ -1,0 +1,21 @@
+span{
+
+    color:white;
+    font-size: 19px;
+    font-weight: bolder;
+    border: 5px solid black;
+    padding:5px;
+    border-radius: 20px;
+    background-color: red;
+   
+}
+footer{
+
+
+    bottom: 0%;
+}
+
+
+
+
+

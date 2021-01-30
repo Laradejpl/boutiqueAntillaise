@@ -1,0 +1,68 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Mon panier - La boutique Antillaise{% endblock %}
+
+{% block content %}
+<h1>Mon panier</h1>
+Retrouver l'ensemble des produits que vous avez sélectionné dans votre panier.
+{% if cart|length > 0 %}
+
+<table class="table mt-3">
+  <thead>
+    <tr>
+      
+      <th scope="col">Produit</th>
+      <th scope="col"></th>
+      <th scope="col">Prix</th>
+      <th scope="col">Total</th>
+      <th scope="col"></th>
+    </tr>
+  </thead>
+  <tbody>
+  {% set total = null %}
+  {% for product in cart %}
+    <tr>
+      
+      <th>
+      <img src="/uploads/{{product.product.illustration}}" alt="{{product.product.name}}" height="50px" ><br>
+
+      
+      </th>
+      <td>
+      {{product.product.name}} <br>
+      <small>{{product.product.subtitle}}<small>
+      </td>
+      <td>
+          <a href="{{path('decrease_to_cart',{'id': product.product.id})}}">
+            <img src="{{asset('assets/image/minus.png')}}" alt="suprimer_un_produit" height="12px">
+          </a>
+    x{{product.quantity}}
+          <a href="{{path('add_to_cart',{'id': product.product.id})}}">
+                    <img src="{{asset('assets/image/add.png')}}" alt="ajouter_un_produit" height="12px">
+          </a>
+      </td>
+      <td>{{(product.product.price /100)| number_format(2)}} €</td>
+      <td>{{((product.product.price * product.quantity) /100)| number_format(2)}} €</td>
+      <td>
+      <a href="{{path('delete_to_cart',{'id': product.product.id})}}">
+       <img src="{{asset('assets/image/delete.png')}}" alt="suprimer_mon_produit" height="18px">
+      </a>
+      </td>
+    </tr>
+    </tr>
+    {% set total = total +(product.product.price * product.quantity ) %}
+{% endfor %}
+  </tbody>
+</table>
+<div class="text-right">
+     <b>Nombre de produit:</b>{{cart|length}}<br>
+     <b>Total de mon papier:</b>{{(total  /100)| number_format(2)}} €
+     <a href="{{path('order')}}" class="btn btn-success btn-block mb-5"> Valider mon panier</a>
+
+<div>
+{% else %}
+  <hr>
+  <p><b>Votre panier est vide.<b><p>
+{% endif %}
+
+{% endblock %}

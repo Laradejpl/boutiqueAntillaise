@@ -1,0 +1,15 @@
+bcfb6e,127.0.0.1,GET,https://127.0.0.1:8000/,1610920035,87602c,500
+87602c,127.0.0.1,GET,https://127.0.0.1:8000/,1610920035,,500
+78981d,127.0.0.1,GET,https://127.0.0.1:8000/,1610920060,,200
+a4499c,127.0.0.1,GET,https://127.0.0.1:8000/favicon.ico,1610920061,fe8aa8,404
+fe8aa8,127.0.0.1,GET,https://127.0.0.1:8000/favicon.ico,1610920061,,404
+5dd8f0,127.0.0.1,GET,https://127.0.0.1:8000/nos-produits,1610920064,,200
+2e76c0,127.0.0.1,GET,https://127.0.0.1:8000/nos-produits?_token=kmghwl7f5G7gN-sEklDysP96MoCMR6FkE-3phJf4N6Y&string=bonnet&submit=,1610920071,,200
+7de07f,127.0.0.1,GET,https://127.0.0.1:8000/,1612007184,,200
+642e90,127.0.0.1,GET,https://127.0.0.1:8000/favicon.ico,1612007190,c332f9,404
+c332f9,127.0.0.1,GET,https://127.0.0.1:8000/favicon.ico,1612007190,,404
+3564cd,127.0.0.1,GET,https://127.0.0.1:8000/nos-produits,1612007197,,200
+e09ef5,127.0.0.1,GET,https://127.0.0.1:8000/nos-produits?_token=kJMIprXYJrty7jm8laPagITCjUFbWfVQaGBZ4UIU3fA&categories%5B0%5D=1&string=&submit=,1612007206,,200
+e42d4a,127.0.0.1,GET,https://127.0.0.1:8000/,1612007227,,200
+21b801,127.0.0.1,GET,https://127.0.0.1:8000/nous-contacter,1612008400,,200
+31022b,127.0.0.1,GET,https://127.0.0.1:8000/inscription,1612008412,,200

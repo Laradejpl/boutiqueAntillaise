@@ -1,0 +1,49 @@
+{% extends "base.html.twig" %}
+
+{% block title %}Mon compte - La boutique Antillaise{% endblock %}
+
+
+
+{% block content %}
+<h1>Mon compte</h1>
+Bienvenue {{app.user.firstname}} dans votre compte.
+<br>
+ C'est dans cet espace que vous allez pouvoir gérer toutes vos informations personnelles.
+ 
+
+<hr>
+<div class="container-fluid">
+<div class="row d-flex justify-content-center">
+  {% if is_granted('ROLE_ADMIN') %}
+
+        <div class="col-12 col-md-2 ml-3 mb-3 p-4 bg-light rounded"> 
+                             <img src="{{asset('assets/image/manager.png')}}"  alt="...">
+
+                     <a href = "/admin"><b> Admnistration</b></a><br> 
+       </div>
+ {% endif %}
+
+<div class="col-12 col-md-2 ml-3 mb-3 p-4 bg-light rounded">
+            <img src="{{asset('assets/image/password.png')}}"  alt="...">
+
+ <a href = "{{path('account_password')}}"><b> Modifier votre mot de passe </b></a><br> 
+
+</div>
+
+         <div class="col-12 col-md-2 ml-3 mb-3 p-4 bg-light rounded">
+                     <img src="{{asset('assets/image/real-estate.png')}}"  alt="...">
+
+             <a href = "{{path('account_address')}}"><b>Gèrer vos adresses</b><br> 
+
+                </div>
+
+            <div class="col-12 col-md-2 ml-3 mb-3 p-4 bg-light rounded">
+            <img src="{{asset('assets/image/goods.png')}}"  alt="...">
+                            <a href = "{{path('account_order')}}"><b>Mes commandes</b></a><br> 
+            </div>
+
+       </div>
+   </div>
+<hr>
+
+{% endblock %}

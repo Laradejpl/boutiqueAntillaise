@@ -1,0 +1,56 @@
+{% extends "base.html.twig" %}
+{% block title %} Nos produits - La boutique Antillaise{% endblock title %}
+
+
+{% block content %}
+ <div class="container mb-4">
+
+
+        <div class="row ">
+            <div class="col-12 col-md-3  " >
+                <h3  >filtrer</h3>
+               {{form(form)}}
+
+
+            </div>
+            <div class="col-12 col-md-9 "> 
+                <h3>Nos produits</h3>
+
+             <div class="container bg-light">
+             <div class="row">
+
+             {% for product in products %}
+            <div class="col-12 col-md-4 mb-2 mt-3 ">
+
+                    {% include  'product/single_product.html.twig'%}
+               
+            </div>
+
+
+    
+             {% endfor %}
+
+
+           </div>
+
+
+             
+             </div>
+                
+
+                
+
+
+            
+            
+            </div>
+
+        </div>
+    </div>
+        
+           
+
+{% endblock %}
+{% block footer %}
+    
+{% endblock footer %}

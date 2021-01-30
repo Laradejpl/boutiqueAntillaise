@@ -1,0 +1,36 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Nous contacter- laboutique Antillaise.{% endblock %}
+
+{% block content %}
+
+
+          <h2>contacter nous</h2>
+          <p>N'esitez pas à prendre contact avec notre équipe,nous vous répondrons dans les meilleurs délais</p>
+             {% for message in app.flashes('notice')%}
+
+                <div class="alert alert-info">{{message}}</div>
+
+
+           {% endfor %}
+    
+         <div class="row  ">
+   
+            <div class="col-8 col-md-12">
+                                 {{form(form)}}
+              <div>
+              <div class="col-4 col-md-12 ">
+                         <div class="bg-light rounded text-center">
+
+                                <strong> La boutique Antillaise</strong>
+                                <hr>
+                                01.30.43.02.91 <br/>
+                                27 rue de la république, 75000 Paris<br/>
+                                contact: laboutiqueAntillaise@gmail.com
+                        <div>
+             <div>
+        <div>
+      
+
+   
+{% endblock %}

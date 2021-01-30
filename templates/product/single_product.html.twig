@@ -1,0 +1,16 @@
+         
+                
+                <div class="card d-block w-100">
+                     <a href="{{ path('product' , {'slug': product.slug}) }}" ><img src="/uploads/{{product.illustration}}" alt="..."  class="img-fluid"></a>
+                
+                    <div class="card-body ">
+                      <center><h4 class="card-title">{{product.name}}</h4>
+                      <h5 class="card-text">{{product.subtitle}}</h5></center>
+                     
+                      <hr>
+                      <center><span class="mt-4 "> {{(product.price /100)| number_format(2)}} €</span></center>
+
+                    </div>
+                
+            </div>
+          

@@ -1,0 +1,67 @@
+{% extends "base.html.twig" %}
+ {% block content %}
+ {% block carousel %}
+ 
+     
+ {% endblock  %}
+<style>
+
+
+
+</style>
+
+   <!-- Three columns of text below the carousel -->
+   <h3>Nos meilleurs ventes</h3>
+   <p>Les articles les plus vendus.</p>
+        <div class="row">
+            
+         {% for product in products %}
+         <div class="col-lg-3">
+        
+
+          {% include  'product/single_product.html.twig' %}
+
+
+          </div>
+         {% endfor %}
+
+        </div><!-- /.row -->
+
+
+        <!-- START THE FEATURETTES -->
+
+        <hr class="featurette-divider">
+
+        <div class="row featurette">
+            <div class="col-md-7">
+                <h2 class="featurette-heading">Une équipe passionnée, <b class="text-muted">avec des professionnels au grand savoir-faire.</b></h2>
+                <p class="lead">La Boutique Antillaise est spécialisée  sur les produits issus des doms ,les ârtisans  issus des plus grandes écoles de l'artisanat.</p>
+            </div>
+            <div class="col-md-5">
+            <img src="{{asset('assets/image/antillesFeaturette1.png')}}" class="img-fluid" alt="nos plus belles creations">
+            </div>
+        </div>
+
+        <hr class="featurette-divider">
+
+        <div class="row featurette">
+            <div class="col-md-7 order-md-2">
+                <h2 class="featurette-heading">Le client est roi <b class="text-muted">customiser vos envies.</b></h2>
+                <p class="lead">nous confectionnons nos produits avec la plus grande attention,nos articles sont inspectés et nous assurons le service aprés-vente.</p>
+            </div>
+            <div class="col-md-5 order-md-1">
+                        <img src="{{asset('assets/image/first.jpg')}}" class="img-fluid" alt="un savoir faire antillais">
+
+            </div>
+        </div>
+
+        <hr class="featurette-divider"> 
+
+      
+
+        <!-- /END THE FEATURETTES -->
+
+
+    
+        
+    {% endblock  %}

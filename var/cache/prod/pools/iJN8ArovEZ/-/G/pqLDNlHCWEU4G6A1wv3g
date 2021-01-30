@@ -1,0 +1,93 @@
+<?php //%255Bbfba628a1bc0d590913e6f5ef04f9938%255D%255B1%255D
+
+return [PHP_INT_MAX, static function () { return \Symfony\Component\VarExporter\Internal\Hydrator::hydrate(
+    $o = [
+        clone (($p = &\Symfony\Component\VarExporter\Internal\Registry::$prototypes)['Doctrine\\ORM\\Query\\ParserResult'] ?? \Symfony\Component\VarExporter\Internal\Registry::p('Doctrine\\ORM\\Query\\ParserResult')),
+        clone ($p['Doctrine\\ORM\\Query\\Exec\\SingleSelectExecutor'] ?? \Symfony\Component\VarExporter\Internal\Registry::p('Doctrine\\ORM\\Query\\Exec\\SingleSelectExecutor')),
+        clone ($p['Doctrine\\ORM\\Query\\ResultSetMapping'] ?? \Symfony\Component\VarExporter\Internal\Registry::p('Doctrine\\ORM\\Query\\ResultSetMapping')),
+    ],
+    null,
+    [
+        'Doctrine\\ORM\\Query\\ParserResult' => [
+            '_sqlExecutor' => [
+                $o[1],
+            ],
+            '_resultSetMapping' => [
+                $o[2],
+            ],
+            '_parameterMappings' => [
+                [
+                    'dpid' => [
+                        0,
+                    ],
+                ],
+            ],
+        ],
+        'Doctrine\\ORM\\Query\\Exec\\AbstractSqlExecutor' => [
+            '_sqlStatements' => [
+                1 => 'SELECT o0_.id AS id_0, o0_.created_at AS created_at_1, o0_.carrier_name AS carrier_name_2, o0_.carrier_price AS carrier_price_3, o0_.delivery AS delivery_4, o0_.is_paid AS is_paid_5, o0_.reference AS reference_6, o0_.stripe_session_id AS stripe_session_id_7, o0_.user_id AS user_id_8 FROM `order` o0_ WHERE o0_.id IN (?) ORDER BY o0_.id DESC',
+            ],
+        ],
+        'stdClass' => [
+            'aliasMap' => [
+                2 => [
+                    'entity' => 'App\\Entity\\Order',
+                ],
+            ],
+            'fieldMappings' => [
+                2 => [
+                    'id_0' => 'id',
+                    'created_at_1' => 'createdAt',
+                    'carrier_name_2' => 'carrierName',
+                    'carrier_price_3' => 'carrierPrice',
+                    'delivery_4' => 'delivery',
+                    'is_paid_5' => 'isPaid',
+                    'reference_6' => 'reference',
+                    'stripe_session_id_7' => 'stripeSessionId',
+                ],
+            ],
+            'typeMappings' => [
+                2 => [
+                    'user_id_8' => 'integer',
+                ],
+            ],
+            'entityMappings' => [
+                2 => [
+                    'entity' => null,
+                ],
+            ],
+            'metaMappings' => [
+                2 => [
+                    'user_id_8' => 'user_id',
+                ],
+            ],
+            'columnOwnerMap' => [
+                2 => [
+                    'id_0' => 'entity',
+                    'created_at_1' => 'entity',
+                    'carrier_name_2' => 'entity',
+                    'carrier_price_3' => 'entity',
+                    'delivery_4' => 'entity',
+                    'is_paid_5' => 'entity',
+                    'reference_6' => 'entity',
+                    'stripe_session_id_7' => 'entity',
+                    'user_id_8' => 'entity',
+                ],
+            ],
+            'declaringClasses' => [
+                2 => [
+                    'id_0' => 'App\\Entity\\Order',
+                    'created_at_1' => 'App\\Entity\\Order',
+                    'carrier_name_2' => 'App\\Entity\\Order',
+                    'carrier_price_3' => 'App\\Entity\\Order',
+                    'delivery_4' => 'App\\Entity\\Order',
+                    'is_paid_5' => 'App\\Entity\\Order',
+                    'reference_6' => 'App\\Entity\\Order',
+                    'stripe_session_id_7' => 'App\\Entity\\Order',
+                ],
+            ],
+        ],
+    ],
+    $o[0],
+    []
+); }];

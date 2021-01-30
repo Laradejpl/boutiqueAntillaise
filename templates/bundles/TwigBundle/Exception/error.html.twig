@@ -1,0 +1,28 @@
+{% extends "base.html.twig" %}
+
+{% block title %} Page introuvable .La boutique des Antilles{% endblock %}
+
+{% block content %}
+<style>
+
+
+.block-small{
+    max-width: 600px;
+    margin:0 auto;
+
+
+}
+
+
+</style>
+
+<div class="block-small">
+
+<h2>Page introuvable</h2>
+<p>désolé, cette page est introuvable,elle ne semble pas être accecible pour le moment.</p>
+<a href="{{path('home')}}" class="btn btn-info">revenir a l'accueil</a>
+      
+           
+
+</div>
+{% endblock %}
